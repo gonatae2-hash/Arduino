@@ -5,12 +5,13 @@ int buttonState = 0;
 
 void setup() {
   pinMode(ledPin, OUTPUT);  
-  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(buttonPin, INPUT);
+  Serial.begin(9600); // 초당 전송되는 데이터의 비트(보드레이트)
 }
 
 void loop() {
   buttonState = digitalRead(buttonPin);
-
+  serial.printlnP(buttonState);
   if (buttonState == LOW)
   {
     digitalWrite(ledPin, HIGH);
