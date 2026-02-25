@@ -6,8 +6,8 @@
 #define DHTTYPE DHT11
 #define DHTPIN 23
 
-const char* ssid = "<SSID>";
-const char* password = "<PASSWORD>";
+const char* ssid = "5층";
+const char* password = "48864886";
 
 WebServer server(80);
 
